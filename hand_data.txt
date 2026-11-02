@@ -1,0 +1,81 @@
+//--------------------------------Human_v2---------------------------------//
+/*[ Global Configurations ] */
+//Ligament width and thickness
+lig_index = [2.5,0.6];
+//Finger pulley length, thickness and radius
+p_index = [5,1.5,1];
+//Thumb pulley length, thickness and radius
+p_thumb = [5,2.2,1];
+//Print angle/hand inward curvature
+a_print = 45;
+
+/*[ Index finger Configuration ] */
+//Index bone lengths
+bl_index = [80,	38, 20,	20];
+//Index joint diameters
+base_jd_index = 12.5;
+jd_index = [base_jd_index*0.7,    base_jd_index,	base_jd_index*0.6,	base_jd_index*0.5];
+//Index origin
+o_index = [0,1.5,0];
+//Index angle
+a_index = [0,-10,0];
+//Index width
+base_w_index = 15;
+w_index = [base_w_index*0.7,base_w_index,base_w_index*0.8,base_w_index*0.7,base_w_index*0.7];
+
+
+/*[ Middle finger Configuration ] */
+//Middle bone lengths
+bl_middle = [82,	41,	20.5,	20.5];
+//Middle joint diameters
+base_jd_middle = 14;
+jd_middle = [base_jd_middle*0.7,    base_jd_middle,	base_jd_middle*0.6,	base_jd_middle*0.5];
+//Middle origin
+o_middle = [0,0,-12];
+//Middle angle
+a_middle = [0,3,0];
+//Middle width
+base_w_middle = 16;
+w_middle = [base_w_middle*0.7,base_w_middle,base_w_middle*0.8,base_w_middle*0.7,base_w_middle*0.7];
+
+/*[ Ring finger Configuration ] */
+//Ring bone lengths
+bl_ring = [79,	38,	19,	19];
+//Ring joint diameters
+base_jd_ring = 12.5;
+jd_ring = [base_jd_ring*0.7,    base_jd_ring,	base_jd_ring*0.6,	base_jd_ring*0.5];
+//Ring origin
+o_ring = [0,1,-24];
+//Ring angle
+a_ring = [0,16,0];
+//ring width
+base_w_ring = 15;
+w_ring = [base_w_ring*0.7,base_w_ring,base_w_ring*0.8,base_w_ring*0.7,base_w_ring*0.7];
+
+/*[ Little finger Configuration ] */
+//Little bone lengths
+bl_little = [74,	35,	17,	17];
+//Little joint diameters
+base_jd_little = 11;
+jd_little = [base_jd_little*0.7,    base_jd_little,	base_jd_little*0.6,	base_jd_little*0.5];
+//Little origin
+o_little = [0,3.5,-34];
+//Little angle
+a_little = [0,30,0];
+//Little width
+base_w_little = 13;
+w_little = [base_w_little*0.7,base_w_little,base_w_little*0.8,base_w_little*0.7,base_w_little*0.7];
+
+/*[ Thumb Configuration ] */
+//Thumb bone lengths
+bl_thumb = [25,	35,	25,	25];
+//Thumb joint diameters
+base_jd_thumb = 16;
+jd_thumb = [base_jd_thumb*0.7,    base_jd_thumb,	base_jd_thumb*0.6,	base_jd_thumb*0.5];
+//Thumb origin
+o_thumb = [-3,3.5,15];
+//Thumb angle
+a_thumb = [0,-100,0];
+//Thumb width
+base_w_thumb = 20;
+w_thumb = [base_w_thumb*0.7,base_w_thumb,base_w_thumb*0.8,base_w_thumb*0.7,base_w_thumb*0.7];
