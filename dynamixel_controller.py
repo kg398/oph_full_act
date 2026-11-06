@@ -1,6 +1,7 @@
 import sys
 from dynamixel_sdk import * 
 from dynamixel_address_book import *
+import time
 
 class Dynamixel:
     def __init__(self, ID, descriptive_device_name, port_name, baudrate, series_name = "xm"):
@@ -216,7 +217,6 @@ class Dynamixel:
             current, dxl_comm_result, dxl_error = self.packet_handler.read2ByteTxRx(self.port_handler, selected_ID, ADDR_PRESENT_CURRENT)
             self._print_error_msg("Read cuurent", dxl_comm_result=dxl_comm_result, dxl_error=dxl_error, selected_ID=selected_ID, print_only_if_error=True)
             reading.append(self.compensate_twos_complement(current, "current"))
-
         if len(selected_IDs) == 1:
             return reading[0]
         else:
@@ -282,6 +282,12 @@ class Dynamixel:
         for selected_ID in selected_IDs:
             dxl_comm_result, dxl_error = self.packet_handler.write2ByteTxRx(self.port_handler, selected_ID, ADDR_GOAL_CURRENT, int(current))
             self._print_error_msg("Write current", dxl_comm_result=dxl_comm_result, dxl_error=dxl_error, selected_ID=selected_ID, print_only_if_error=True)
+
+    def write_current_list(self, current, ID = None):
+        selected_IDs = self.fetch_and_check_ID(ID)
+        for i in range(0,len(selected_IDs)):
+            dxl_comm_result, dxl_error = self.packet_handler.write2ByteTxRx(self.port_handler, selected_IDs[i], ADDR_GOAL_CURRENT, int(current[i]))
+            self._print_error_msg("Write current", dxl_comm_result=dxl_comm_result, dxl_error=dxl_error, selected_ID=selected_IDs[i], print_only_if_error=True)
     
     def write_pwm(self, pwm, ID = None):
         selected_IDs = self.fetch_and_check_ID(ID)

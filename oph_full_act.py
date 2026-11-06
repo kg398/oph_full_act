@@ -10,18 +10,89 @@ def main():
 
     # servo.write_position(pos=0, ID=1)
     # servo.write_position(pos=1000, ID=1)
-    oph = controller(port='COM15', dynxIDs=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], dynxLabels=['index_fa','index_fb','index_ea','index_eb','index_ec','middle_fa','middle_fb','middle_ea','middle_eb','middle_ec','ring_fa','ring_fb','ring_ea','ring_eb','ring_ec','thumb_fa','thumb_fb','thumb_ea','thumb_eb','thumb_ec'])
+    oph = controller(port='COM15', dynxIDs=[5,9,12,17,18,4,8,19,13,14,3,7,15,20,1,2,6,16,10,11], dynxLabels=['index_fa','index_fb','index_ea','index_eb','index_ec','middle_fa','middle_fb','middle_ea','middle_eb','middle_ec','ring_fa','ring_fb','ring_ea','ring_eb','ring_ec','thumb_fa','thumb_fb','thumb_ea','thumb_eb','thumb_ec'])
 
+    # oph.write_finger_joints(0,[0,0,0,0])
+
+    # time.sleep(1)
+
+    # oph.write_finger_joints(0,[0,0,0,1])
+
+    # time.sleep(1)
+
+    # oph.write_finger_joints(0,[0,0,0,0])
+
+    #oph.all_abs_pos(2048)
+
+    #oph.home()
+
+    # time.sleep(0.5)
+
+    # oph.write_finger_joints(0,[0,0,0,0.5])
+
+    # time.sleep(0.5)
+
+    # oph.write_finger_joints(0,[0,0,0,-0.5])
+
+    # time.sleep(0.5)
+
+    # oph.write_finger_joints(0,[-0.5,0,0,0])
+
+    # time.sleep(0.5)
+
+    # oph.write_finger_joints(0,[0.5,0.5,0.5,0])
+
+    oph.home()
+
+    #time.sleep(1)
+
+    oph.admittance()
+
+    #oph.admittance(frame='test.json')
+
+    oph.home()
+
+    oph.write_frame('test.json')
+
+    #oph.home()
+
+    #oph.calibration()
+
+    time.sleep(0.5)
+
+    oph.write_finger_joints(0,[0,0.8,0,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(1,[0.8,0.6,0.6,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(2,[0.8,0.6,0.6,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(3,[0.8,0.6,0.6,0])
+    time.sleep(0.1)
     oph.write_finger_joints(0,[0,0,0,0])
-
-    time.sleep(1)
-
-    oph.write_finger_joints(0,[0,0,0,1])
-
-    time.sleep(1)
-
+    time.sleep(0.1)
+    oph.write_finger_joints(1,[0,0,0,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(2,[0,0,0,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(3,[0,0,0,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(0,[0,0.8,0.8,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(1,[0.8,0.6,0.6,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(2,[0.8,0.6,0.6,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(3,[0.8,0.6,0.6,0])
+    time.sleep(0.1)
     oph.write_finger_joints(0,[0,0,0,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(1,[0,0,0,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(2,[0,0,0,0])
+    time.sleep(0.1)
+    oph.write_finger_joints(3,[0,0,0,0])
+    time.sleep(0.1)
 
-    #oph.all_abs_zero()
+    oph.home()
 
 if __name__ == '__main__': main()
