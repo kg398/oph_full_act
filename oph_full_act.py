@@ -46,19 +46,58 @@ def main():
 
     #time.sleep(1)
 
-    oph.admittance()
+    #oph.admittance()
 
-    #oph.admittance(frame='test.json')
+    ##oph.admittance(frame='test.json')
+
+    #oph.admittance(frame='test2.json')
+
+    #oph.admittance(frame='test3.json')
+
+    #oph.admittance(frame='test4.json')
+
+    # oph.write_frame('test6.json')
+
+    # oph.admittance(frame='test6.json')
+
+    # oph.write_frame('test.json')
+
+    time.sleep(2)
+
+    oph.write_frame('test2.json')
+
+    time.sleep(2)
+
+    oph.write_frame('test5.json')
+
+    time.sleep(2)
+
+    oph.write_frame('test4.json')
+
+    time.sleep(2)
+
+    oph.write_frame('test3.json')
+
+    time.sleep(2)
+
+    # oph.write_frame('test6.json')
+
+    # time.sleep(2)
+
+    # demand_pos = oph.servo.read_position(ID='all')
+
+    # demand_pos[15]+=2000
+    # demand_pos[1]+=500
+
+    # oph.servo.write_position_list(demand_pos,ID='all')
+
+    #time.sleep(2)
 
     oph.home()
 
-    oph.write_frame('test.json')
-
-    #oph.home()
-
     #oph.calibration()
 
-    time.sleep(0.5)
+    time.sleep(2)
 
     oph.write_finger_joints(0,[0,0.8,0,0])
     time.sleep(0.1)
@@ -91,7 +130,7 @@ def main():
     oph.write_finger_joints(2,[0,0,0,0])
     time.sleep(0.1)
     oph.write_finger_joints(3,[0,0,0,0])
-    time.sleep(0.1)
+    time.sleep(0.5)
 
     oph.home()
 

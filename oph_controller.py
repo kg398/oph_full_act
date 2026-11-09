@@ -12,7 +12,7 @@ class controller():
         self.dynxLabels = dynxLabels
         self.servo = Dynamixel(ID=dynxIDs, descriptive_device_name=dynxLabels, series_name=['xc']*len(dynxIDs), baudrate=1000000, port_name=port)
 
-        self.current_set = 30
+        self.current_set = 50
 
         self.servo.begin_communication(enable_torque=False)
         self.servo.set_operating_mode("current-based position","all")
